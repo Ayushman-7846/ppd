@@ -1,0 +1,177 @@
+{
+  "name": "LinguaLens phonology review pilot v1",
+  "dimension": "phonology",
+  "provenance": "LinguaLens-authored pilot benchmark v1.0.0. Candidate annotations pending independent review.",
+  "items": [
+    {
+      "item_key": "pho-01",
+      "stimulus": {
+        "rows": [
+          {
+            "word_id": "w1",
+            "underlying": "i g",
+            "surface": "i k"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "e g",
+            "surface": "e k"
+          },
+          {
+            "word_id": "w3",
+            "underlying": "u g i",
+            "surface": "u g i"
+          },
+          {
+            "word_id": "w4",
+            "underlying": "e t",
+            "surface": "e t"
+          }
+        ],
+        "phones_of_interest": [
+          "g",
+          "k"
+        ]
+      },
+      "reference": {
+        "detected": true,
+        "rule_input": "g",
+        "rule_output": "k",
+        "environment": "_ #",
+        "annotation": "The toy contrast supports g to k word-finally. Nonfinal g is the negative control.",
+        "held_out": [
+          {
+            "word_id": "w1",
+            "underlying": "o g",
+            "surface": "o k"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "a g e",
+            "surface": "a g e"
+          }
+        ]
+      }
+    },
+    {
+      "item_key": "pho-02",
+      "stimulus": {
+        "rows": [
+          {
+            "word_id": "w1",
+            "underlying": "a s u",
+            "surface": "a z u"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "i a s u",
+            "surface": "i a z u"
+          },
+          {
+            "word_id": "w3",
+            "underlying": "e s u",
+            "surface": "e s u"
+          },
+          {
+            "word_id": "w4",
+            "underlying": "a s i",
+            "surface": "a s i"
+          }
+        ],
+        "phones_of_interest": [
+          "s",
+          "z"
+        ]
+      },
+      "reference": {
+        "detected": true,
+        "rule_input": "s",
+        "rule_output": "z",
+        "environment": "a _ u",
+        "annotation": "Compare the attested left and right controls. The target literal substitution requires both neighbors.",
+        "held_out": [
+          {
+            "word_id": "w1",
+            "underlying": "o a s u",
+            "surface": "o a z u"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "i s u",
+            "surface": "i s u"
+          }
+        ]
+      }
+    },
+    {
+      "item_key": "pho-03",
+      "stimulus": {
+        "rows": [
+          {
+            "word_id": "w1",
+            "underlying": "a b",
+            "surface": "a b"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "u b",
+            "surface": "u b"
+          },
+          {
+            "word_id": "w3",
+            "underlying": "a b i",
+            "surface": "a b i"
+          },
+          {
+            "word_id": "w4",
+            "underlying": "e p",
+            "surface": "e p"
+          }
+        ],
+        "phones_of_interest": [
+          "b",
+          "p"
+        ]
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "The target b is invariant across the supplied pairs. The data do not support b to p."
+      }
+    },
+    {
+      "item_key": "pho-04",
+      "stimulus": {
+        "rows": [
+          {
+            "word_id": "w1",
+            "underlying": "i n p a",
+            "surface": "i n p a"
+          },
+          {
+            "word_id": "w2",
+            "underlying": "a n p u",
+            "surface": "a n p u"
+          },
+          {
+            "word_id": "w3",
+            "underlying": "u n a",
+            "surface": "u n a"
+          },
+          {
+            "word_id": "w4",
+            "underlying": "i m a",
+            "surface": "i m a"
+          }
+        ],
+        "phones_of_interest": [
+          "n",
+          "m"
+        ]
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "The target n is invariant, including before p. Surface m is present in a separate invariant pair."
+      }
+    }
+  ]
+}

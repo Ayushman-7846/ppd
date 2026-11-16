@@ -1,0 +1,88 @@
+.science-page { display: grid; gap: 14px; min-width: 0; }
+.science-page > .lab-title { margin-bottom: 3px; }
+.science-page .lab-title .eyebrow { color: var(--cyan); }
+.science-page > .studio-grid, .science-page > .metric-grid { margin-bottom: 0; }
+.science-page .lab-title h1 { margin-top: 7px; }
+.science-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 8px; }
+.science-tabs .ll-small { white-space: normal; }
+.science-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.science-filters > label > small { font-weight: 450; }
+.science-filters select[multiple] { min-height: 72px; }
+.science-filters option { padding: 2px 3px; }
+.science-filters .check-field { align-self: start; }
+.science-subfilter { display: grid; align-content: start; gap: 5px; }
+.cohort-details { padding: 10px 12px; background: var(--surface); }
+.cohort-details > summary { display: flex; gap: 7px; align-items: center; cursor: pointer; font-size: 12px; font-weight: 650; }
+.cohort-details[open] > summary { margin-bottom: 10px; }
+.science-filter-panel { background: linear-gradient(130deg, color-mix(in srgb, var(--violet) 6%, var(--panel)), var(--panel) 56%); }
+.science-chart-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; min-width: 0; align-items: stretch; }
+.science-small-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-block: 9px; }
+.science-metric { background: color-mix(in srgb, var(--panel) 70%, var(--bg)); }
+.science-metric strong { color: var(--text); overflow-wrap: anywhere; }
+.science-chart { height: 246px; width: 100%; min-width: 0; }
+.science-heatmap td { text-align: center; min-width: 72px; border: 3px solid var(--panel); border-radius: 7px; font-variant-numeric: tabular-nums; }
+.science-heatmap td strong, .science-heatmap td small, .science-block { display: block; }
+.science-heatmap td small { color: var(--muted); }
+.science-heatmap .matrix-match { background: color-mix(in srgb, var(--cyan) 16%, var(--surface)); }
+.science-heatmap .matrix-differ { background: color-mix(in srgb, var(--violet) 18%, var(--surface)); }
+.science-stats { line-height: 1.55; grid-template-columns: minmax(100px, .9fr) minmax(80px, 1fr); margin: 6px 0 10px; }
+.audit-pair { display: contents; }
+.science-definitions { display: grid; gap: 9px; margin: 0; }
+.science-definitions > div { padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.science-definitions dt { font-weight: 650; font-size: 13px; text-transform: capitalize; }
+.science-definitions dd { color: var(--muted-strong); margin: 2px 0 0; font-size: 12px; }
+.science-votes { display: grid; gap: 7px; }
+.science-votes div { display: grid; grid-template-columns: minmax(75px, .5fr) minmax(80px, 1fr) auto; align-items: center; gap: 9px; font-size: 12px; overflow-wrap: anywhere; }
+.science-votes progress { width: 100%; height: 9px; appearance: none; border: none; border-radius: 10px; background: var(--line); accent-color: var(--blue); }
+.science-votes progress::-webkit-progress-bar { border-radius: 10px; background: var(--line); }
+.science-votes progress::-webkit-progress-value { border-radius: 10px; background: linear-gradient(90deg, var(--blue), var(--violet)); }
+.science-votes progress::-moz-progress-bar { border-radius: 10px; background: var(--blue); }
+.science-review-title { margin-block: 7px; }
+.science-wrap { white-space: normal; overflow-wrap: anywhere; }
+.science-rubric-row { display: grid; grid-template-columns: minmax(98px, .54fr) minmax(0, 1.4fr); gap: 8px; }
+.science-annotations { padding-left: 18px; color: var(--muted-strong); font-size: 12px; list-style: disc; margin-top: 9px; }
+.science-adjudication { margin-top: 12px; max-width: 640px; }
+.science-response-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr)); gap: 9px; margin-top: 9px; }
+.science-response-pane { max-height: 650px; overflow: auto; scrollbar-width: thin; }
+.science-response-pane .research-note, .science-response-pane .result-audit { margin-top: 7px; }
+.science-tall-table { max-height: 430px; }
+.science-stimulus { margin-top: 10px; }
+.science-caution { border-color: color-mix(in srgb, var(--violet) 40%, var(--line)); }
+.science-findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 8px; }
+.science-report { display: grid; gap: 13px; }
+.science-report .metric-grid { margin: 0; }
+.research-workbench .science-review-title { margin: 0; }
+@media (max-width: 1150px) {
+  .science-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .science-chart { height: 225px; }
+}
+@media (max-width: 670px) {
+  .science-chart-grid { grid-template-columns: minmax(0, 1fr); }
+  .science-chart { height: 220px; }
+  .science-rubric-row { grid-template-columns: minmax(0, 1fr); }
+}
+.provider-diagnostics { margin-top: .8rem; min-width: 0; }
+.provider-diagnostics dd { overflow-wrap: anywhere; }
+.provider-diagnostics h3 { font-size: 1.15rem; margin-bottom: .35rem; }
+.provider-diagnostics .audit-grid { margin-top: .65rem; }
+.showcase { max-width: 1110px; }
+.showcase h2 { margin: 0 0 .8rem; font-size: clamp(1.25rem, 2.1vw, 1.65rem); }
+.showcase .dashboard-panel p { line-height: 1.6; }
+.showcase-feature { display: flex; align-items: flex-start; gap: 1rem; }
+.showcase-feature > svg { flex: none; color: var(--cyan); }
+.showcase-feature h2 { margin-top: .5rem; }
+.showcase-feature p + p { margin-top: .4rem; }
+.showcase-feature a { margin-top: .8rem; }
+.showcase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+.showcase-tile { padding: .85rem 1rem; display: flex; align-items: center; gap: .65rem; }
+.showcase-tile > span { flex: 1; }
+.showcase-tile:hover { border-color: var(--blue); }
+.showcase-steps { display: grid; gap: .65rem; list-style-position: inside; margin: 0; padding: 0; }
+.showcase-step { padding: .8rem 1rem; }
+.showcase-step > svg { display: inline; vertical-align: middle; margin-right: .75rem; color: var(--cyan); }
+.showcase-step > div { display: inline-block; width: calc(100% - 3.5rem); vertical-align: top; }
+.showcase-step h3, .showcase-step p { margin: 0 0 .35rem; }
+.showcase-step h3 { font-size: 1.07rem; }
+.showcase-step a svg { display: inline; }
+.showcase-limitations { padding-inline-start: 1.3rem; line-height: 1.65; }
+@media (max-width: 620px) { .showcase-grid { grid-template-columns: minmax(0, 1fr); } }

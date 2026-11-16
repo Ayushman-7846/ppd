@@ -1,0 +1,53 @@
+{
+  "name": "LinguaLens recursion review pilot v1",
+  "dimension": "recursion",
+  "provenance": "LinguaLens-authored pilot benchmark v1.0.0. Candidate annotations pending independent review.",
+  "items": [
+    {
+      "item_key": "rec-01",
+      "stimulus": {
+        "sentence": "The sculptor's cousin's notebook vanished.",
+        "category": "possessive"
+      },
+      "reference": {
+        "detected": true,
+        "category": "possessive",
+        "annotation": "A possessive phrase is inside a possessive phrase. Accept an expansion with exactly one additional possessor while preserving the matrix predicate and nesting."
+      }
+    },
+    {
+      "item_key": "rec-02",
+      "stimulus": {
+        "sentence": "The cabin beside the road near the river burned.",
+        "category": "prepositional"
+      },
+      "reference": {
+        "detected": true,
+        "category": "prepositional",
+        "annotation": "Use the reading in which the road is near the river. The PP headed by beside contains an NP modified by a PP. Additional valid expansions need human review."
+      }
+    },
+    {
+      "item_key": "rec-03",
+      "stimulus": {
+        "sentence": "The pilot sent a letter.",
+        "category": "possessive"
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "The targeted possessive recursion is absent."
+      }
+    },
+    {
+      "item_key": "rec-04",
+      "stimulus": {
+        "sentence": "The cyclist waited near the station.",
+        "category": "prepositional"
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "The targeted PP is present once. The station NP contains no embedded PP, so mere occurrence does not establish recursion."
+      }
+    }
+  ]
+}

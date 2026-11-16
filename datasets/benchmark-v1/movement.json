@@ -1,0 +1,53 @@
+{
+  "name": "LinguaLens movement review pilot v1",
+  "dimension": "movement",
+  "provenance": "LinguaLens-authored pilot benchmark v1.0.0. Candidate annotations pending independent review.",
+  "items": [
+    {
+      "item_key": "mov-01",
+      "stimulus": {
+        "sentence": "Which suitcase did the guard inspect?",
+        "category": "wh-movement"
+      },
+      "reference": {
+        "detected": true,
+        "category": "wh-movement",
+        "annotation": "The moved object is ‘Which suitcase’. The lower copy or trace is the object of inspect and the landing site is the clause-initial interrogative position. Grade indexing and both sites."
+      }
+    },
+    {
+      "item_key": "mov-02",
+      "stimulus": {
+        "sentence": "The report was filed by the clerk.",
+        "category": "passive"
+      },
+      "reference": {
+        "detected": true,
+        "category": "passive",
+        "annotation": "Under the target passive analysis, ‘The report’ corresponds to the internal argument of filed and surfaces in subject position. Require appropriately co-indexed positions."
+      }
+    },
+    {
+      "item_key": "mov-03",
+      "stimulus": {
+        "sentence": "The guard inspected the suitcase.",
+        "category": "wh-movement"
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "No interrogative constituent is fronted. Judge the requested movement category only."
+      }
+    },
+    {
+      "item_key": "mov-04",
+      "stimulus": {
+        "sentence": "The clerk filed the report.",
+        "category": "passive"
+      },
+      "reference": {
+        "detected": false,
+        "annotation": "This active clause lacks the targeted passive dependency."
+      }
+    }
+  ]
+}

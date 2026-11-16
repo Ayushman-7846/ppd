@@ -1,0 +1,135 @@
+{
+  "annotation_version": "1.0.0",
+  "review_status": "candidate_unverified",
+  "license_note": "Authored for LinguaLens. No paper stimuli or downloaded benchmarks were reused.",
+  "items": [
+    {
+      "item_key": "amb-01",
+      "dimension": "ambiguity",
+      "difficulty": "moderate",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "amb-02",
+      "dimension": "ambiguity",
+      "difficulty": "moderate",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "amb-03",
+      "dimension": "ambiguity",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "amb-04",
+      "dimension": "ambiguity",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "rec-01",
+      "dimension": "recursion",
+      "difficulty": "moderate",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "rec-02",
+      "dimension": "recursion",
+      "difficulty": "advanced",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "rec-03",
+      "dimension": "recursion",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "rec-04",
+      "dimension": "recursion",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "mov-01",
+      "dimension": "movement",
+      "difficulty": "moderate",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "mov-02",
+      "dimension": "movement",
+      "difficulty": "advanced",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "mov-03",
+      "dimension": "movement",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "mov-04",
+      "dimension": "movement",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "pho-01",
+      "dimension": "phonology",
+      "difficulty": "moderate",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "pho-02",
+      "dimension": "phonology",
+      "difficulty": "advanced",
+      "expected_detection": true,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "pho-03",
+      "dimension": "phonology",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    },
+    {
+      "item_key": "pho-04",
+      "dimension": "phonology",
+      "difficulty": "introductory",
+      "expected_detection": false,
+      "annotation_version": "1.0.0",
+      "review_status": "candidate_unverified"
+    }
+  ]
+}

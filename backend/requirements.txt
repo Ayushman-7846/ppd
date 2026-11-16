@@ -1,0 +1,16 @@
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+SQLAlchemy>=2.0.40,<3
+alembic>=1.15,<2
+psycopg[binary]>=3.2,<4
+pydantic-settings>=2.8,<3
+email-validator>=2.2,<3
+argon2-cffi>=23.1,<26
+anthropic>=0.125,<1
+cryptography>=50,<51
+google-genai>=2.34,<3
+httpx>=0.28,<1
+ollama>=0.6.3,<1
+openai>=2.54,<3
+python-multipart>=0.0.20,<1
+reportlab>=4.4,<5

@@ -1,0 +1,22 @@
+{
+  "provenance": "synthetic",
+  "models": ["Atlas Demo", "Nova Demo", "Sage Demo"],
+  "scores": [
+    {"dimension": "Ambiguity", "Atlas Demo": 76, "Nova Demo": 65, "Sage Demo": 57},
+    {"dimension": "Recursion", "Atlas Demo": 86, "Nova Demo": 73, "Sage Demo": 63},
+    {"dimension": "Movement", "Atlas Demo": 82, "Nova Demo": 61, "Sage Demo": 52},
+    {"dimension": "Phonology", "Atlas Demo": 68, "Nova Demo": 71, "Sage Demo": 59}
+  ],
+  "activity": [
+    {"id": "DEMO-004", "name": "Attachment ambiguity", "dimension": "ambiguity", "status": "Complete", "date": "2026-11-12"},
+    {"id": "DEMO-003", "name": "Nested noun phrases", "dimension": "recursion", "status": "Complete", "date": "2026-11-11"},
+    {"id": "DEMO-002", "name": "Wh-dependency traces", "dimension": "movement", "status": "Complete", "date": "2026-11-10"},
+    {"id": "DEMO-001", "name": "Word-final devoicing", "dimension": "phonology", "status": "Complete", "date": "2026-11-09"}
+  ],
+  "examples": [
+    {"dimension": "ambiguity", "title": "Two readings of one sentence", "stimulus": "I saw the astronomer with the telescope.", "task": "Identify what the prepositional phrase modifies in each reading.", "observation": "The prepositional phrase can attach to the verb phrase or to the object noun phrase. Both trees preserve the surface word order.", "output": "VP attachment: I used the telescope.\nNP attachment: The astronomer had the telescope."},
+    {"dimension": "recursion", "title": "Add one layer of possession", "stimulus": "Mira’s neighbor’s cat slept.", "task": "Identify the recursive phrase and add one more layer of the same type.", "observation": "The possessor of the cat is itself a possessed noun phrase. Adding another possessor preserves the embedding pattern.", "output": "Mira’s neighbor’s cousin’s cat slept.\n[NP [NP [NP Mira’s neighbor]’s cousin]’s cat]"},
+    {"dimension": "movement", "title": "Find the position of the missing object", "stimulus": "Which map did Lena redraw?", "task": "Link the fronted object to its corresponding trace in the clause.", "observation": "The interpreted object of redraw is which map. The shared index links the surface phrase to its original position.", "output": "[CP Which mapᵢ [C did] [TP Lena [VP redraw tᵢ]]]"},
+    {"dimension": "phonology", "title": "Infer the voicing environment", "stimulus": "n a b a / n a p\ns i d a / s i t\nl u g a / l u k", "task": "Infer a rule from these illustrative matched forms. Treat each row as a stem with and without a vowel suffix.", "observation": "Voiced stops occur before the vowel suffix. Their voiceless counterparts occur at the end of the bare word.", "output": "Voiced stop → voiceless stop / _ #\n# denotes the word boundary."}
+  ]
+}

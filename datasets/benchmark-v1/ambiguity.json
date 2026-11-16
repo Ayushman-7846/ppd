@@ -1,0 +1,51 @@
+{
+  "name": "LinguaLens ambiguity review pilot v1",
+  "dimension": "ambiguity",
+  "provenance": "LinguaLens-authored pilot benchmark v1.0.0. Candidate annotations pending independent review.",
+  "items": [
+    {
+      "item_key": "amb-01",
+      "stimulus": {
+        "sentence": "The guard watched the rider with binoculars."
+      },
+      "reference": {
+        "detected": true,
+        "interpretation_count": 2,
+        "annotation": "PP attachment allows a seeing instrument reading (VP) and a rider possession reading (NP). Inspect two distinct trees and keep the same lexical yield."
+      }
+    },
+    {
+      "item_key": "amb-02",
+      "stimulus": {
+        "sentence": "We photographed the statue near the fountain."
+      },
+      "reference": {
+        "detected": true,
+        "interpretation_count": 2,
+        "annotation": "The PP can locate the photographing event or modify the statue. More fine-grained attachment analyses should be adjudicated."
+      }
+    },
+    {
+      "item_key": "amb-03",
+      "stimulus": {
+        "sentence": "The sparrow slept."
+      },
+      "reference": {
+        "detected": false,
+        "interpretation_count": 1,
+        "annotation": "There is no competing constituent attachment in the intended simple intransitive analysis."
+      }
+    },
+    {
+      "item_key": "amb-04",
+      "stimulus": {
+        "sentence": "The careful baker smiled."
+      },
+      "reference": {
+        "detected": false,
+        "interpretation_count": 1,
+        "annotation": "In the intended reading the adjective is inside the subject NP. Lexical senses are outside this structural-attachment item."
+      }
+    }
+  ]
+}

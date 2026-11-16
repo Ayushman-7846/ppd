@@ -1,0 +1,83 @@
+name: lingualens
+
+x-backend-image: &backend-image
+  image: lingualens-backend:local
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: lingualens
+      POSTGRES_USER: lingualens
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U lingualens -d lingualens"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  migrate:
+    <<: *backend-image
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: &database-url postgresql+psycopg://lingualens:${POSTGRES_PASSWORD}@db:5432/lingualens
+    command: ["alembic", "upgrade", "head"]
+
+  backend:
+    <<: *backend-image
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: *database-url
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
+      SECURE_COOKIE: ${SECURE_COOKIE:-false}
+      REGISTRATION_ENABLED: ${REGISTRATION_ENABLED:-true}
+      ALLOW_SHARED_PROVIDER_KEYS: ${ALLOW_SHARED_PROVIDER_KEYS:-false}
+      WORKER_ENABLED: ${WORKER_ENABLED:-true}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      CREDENTIAL_KEY: ${CREDENTIAL_KEY:-}
+      OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
+      SEMANTIC_MODEL: ${SEMANTIC_MODEL:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        BACKEND_URL: http://backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/v1/demo/overview', {signal: AbortSignal.timeout(2000)}).then(r => process.exit(r.ok ? 0 : 1), () => process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  db-data:
